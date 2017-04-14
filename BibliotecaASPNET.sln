@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaASPNET", "BibliotecaASPNET\BibliotecaASPNET.csproj", "{FAC3904C-5E7E-4B9B-B20E-8EB871C1D5BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaASPNET.Tests", "BibliotecaASPNET.Tests\BibliotecaASPNET.Tests.csproj", "{0051308C-20DE-4797-AEEC-5A9EBF04CF8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{FAC3904C-5E7E-4B9B-B20E-8EB871C1D5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAC3904C-5E7E-4B9B-B20E-8EB871C1D5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAC3904C-5E7E-4B9B-B20E-8EB871C1D5BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0051308C-20DE-4797-AEEC-5A9EBF04CF8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0051308C-20DE-4797-AEEC-5A9EBF04CF8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0051308C-20DE-4797-AEEC-5A9EBF04CF8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0051308C-20DE-4797-AEEC-5A9EBF04CF8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

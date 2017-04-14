@@ -12,12 +12,16 @@ namespace BibliotecaASPNET.Controllers
     {
         // GET: Livro
 
-        private LivroRepository _repositorio;
+        private readonly LivroRepository _repositorio;
+
+        public LivroController(LivroRepository _repositorio)
+        {
+            this._repositorio = _repositorio;
+        }
 
         [HttpGet]
         public ActionResult ListarLivros()
         {
-            _repositorio = new LivroRepository();
 
             ModelState.Clear();
 
@@ -37,7 +41,6 @@ namespace BibliotecaASPNET.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _repositorio = new LivroRepository();
 
                     if(_repositorio.AdicionarLivro(livroObj))
                     {
@@ -58,7 +61,6 @@ namespace BibliotecaASPNET.Controllers
         [HttpGet]
         public ActionResult EditarLivro(int id)
         {
-            _repositorio = new LivroRepository();
 
             return View(_repositorio.ListarLivros().Find(t => t.LivroId == id));
         }
@@ -68,7 +70,6 @@ namespace BibliotecaASPNET.Controllers
         {
             try
             {
-                _repositorio = new LivroRepository();
 
                 _repositorio.EditarLivro(livroObj);
 
@@ -85,7 +86,6 @@ namespace BibliotecaASPNET.Controllers
         {
             try
             {
-                _repositorio = new LivroRepository();
 
                 if (_repositorio.ExcluirLivro(id))
                 {

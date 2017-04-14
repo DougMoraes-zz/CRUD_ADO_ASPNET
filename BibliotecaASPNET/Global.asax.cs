@@ -13,6 +13,8 @@ namespace BibliotecaASPNET
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            Bootstrapper.Initialize();
         }
     }
 }
