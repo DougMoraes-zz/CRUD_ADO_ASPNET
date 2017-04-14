@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BibliotecaASPNET.Models.Livro>
+
+<p>
+    @Html.ActionLink("Adicionar novo livro", "AdicionarLivro")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LivroTitulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LivroAutor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LivroEditora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LivroAno)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    @Html.HiddenFor(model =>item.LivroId)
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LivroTitulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LivroAutor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LivroEditora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LivroAno)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "EditarLivro", new { id=item.LivroId }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.LivroId }) |
+            @Html.ActionLink("Deletar", "ExcluirLivroPorId", new { id=item.LivroId })
+        </td>
+    </tr>
+}
+
+</table>
